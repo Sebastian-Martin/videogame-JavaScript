@@ -4,6 +4,7 @@ const btnUp = document.querySelector('#up');
 const btnLeft = document.querySelector('#left');
 const btnRight = document.querySelector('#right');
 const btnDowm = document.querySelector('#down');
+const btnRestart = document.querySelector('#restart');
 const spanLives = document.querySelector('#lives');
 const spanTime = document.querySelector('#time');
 const spanRecord = document.querySelector('#record');
@@ -193,6 +194,7 @@ btnUp.addEventListener('click', moveUp);
 btnLeft.addEventListener('click', moveLeft);
 btnRight.addEventListener('click', moveRight);
 btnDowm.addEventListener('click', moveDown);
+btnRestart.addEventListener('click', restartGame);
 
 function moveByKeys(event) {
   if(event.key == 'ArrowUp') moveUp();
@@ -235,4 +237,7 @@ function moveDown() {
     playerPosition.y += elementsSize;
     startGame();
   }
+}
+function restartGame() {
+  location.reload();
 }
